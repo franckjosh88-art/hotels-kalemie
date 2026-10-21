@@ -50,9 +50,10 @@ nav.scrolled .nav-links a{color:var(--lac)}
 /* HERO */
 header{position:relative;min-height:100svh;display:flex;align-items:center;color:var(--blanc);overflow:hidden;
   background:
-   radial-gradient(1200px 600px at 80% -10%,rgba(224,122,63,.25),transparent 60%),
-   radial-gradient(900px 500px at 10% 110%,rgba(22,105,122,.5),transparent 55%),
-   linear-gradient(160deg,#072B36 0%,var(--lac) 45%,var(--lac2) 100%)}
+   radial-gradient(1200px 600px at 80% -10%,rgba(224,122,63,.3),transparent 60%),
+   radial-gradient(900px 500px at 10% 110%,rgba(22,105,122,.45),transparent 55%),
+   linear-gradient(160deg,rgba(7,43,54,.9) 0%,rgba(11,61,77,.78) 50%,rgba(15,76,92,.66) 100%),
+   url('images/hero-lac.jpg') center/cover no-repeat}
 .hero-in{position:relative;z-index:2;padding:130px 0 150px;max-width:720px}
 .kicker{display:inline-block;font-size:.8rem;letter-spacing:.18em;text-transform:uppercase;color:var(--sable);border:1px solid rgba(232,213,183,.4);padding:7px 16px;border-radius:99px;margin-bottom:26px}
 h1{font-family:var(--serif);font-size:clamp(2.4rem,6vw,4.2rem);line-height:1.08;font-weight:700;margin-bottom:22px}
@@ -90,10 +91,10 @@ h2{font-family:var(--serif);font-size:clamp(1.8rem,4vw,2.6rem);color:var(--lac);
 @media(max-width:900px){.cards{grid-template-columns:1fr;max-width:440px;margin:0 auto}}
 .card{background:var(--blanc);border-radius:var(--r);overflow:hidden;box-shadow:var(--ombre);display:flex;flex-direction:column;transition:transform .25s}
 .card:hover{transform:translateY(-6px)}
-.card-vis{height:180px;display:flex;align-items:flex-end;padding:16px;color:#fff;font-size:.78rem;letter-spacing:.06em;text-transform:uppercase}
-.vis-1{background:linear-gradient(145deg,#8FB8C4,#4A7C8C)}
-.vis-2{background:linear-gradient(145deg,#0F4C5C,#16697A)}
-.vis-3{background:linear-gradient(145deg,#C4612A,#E8B87A)}
+.card-vis{height:180px;background-size:cover;background-position:center}
+.vis-1{background-image:url('images/chambre-standard.jpg')}
+.vis-2{background-image:url('images/chambre-vue-lac.jpg')}
+.vis-3{background-image:url('images/bungalow-famille.jpg')}
 .card-body{padding:26px;display:flex;flex-direction:column;flex:1}
 .card h3{font-family:var(--serif);font-size:1.35rem;color:var(--lac);margin-bottom:6px}
 .prix{font-size:.95rem;color:var(--soleil);font-weight:700;margin-bottom:14px}
@@ -108,9 +109,9 @@ h2{font-family:var(--serif);font-size:clamp(1.8rem,4vw,2.6rem);color:var(--lac);
 .exp-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
 @media(max-width:900px){.exp-grid{grid-template-columns:repeat(2,1fr)}}
 .exp{position:relative;border-radius:var(--r);aspect-ratio:3/4;overflow:hidden;display:flex;align-items:flex-end;padding:18px;color:#fff}
-.exp:nth-child(1){background:linear-gradient(180deg,transparent 40%,rgba(7,43,54,.85)),linear-gradient(135deg,#16697A,#0B3D4D)}
-.exp:nth-child(2){background:linear-gradient(180deg,transparent 40%,rgba(7,43,54,.85)),linear-gradient(135deg,#E07A3F,#8B3A1F)}
-.exp:nth-child(3){background:linear-gradient(180deg,transparent 40%,rgba(7,43,54,.85)),linear-gradient(135deg,#5B8C5A,#2D5A3D)}
+.exp:nth-child(1){background:linear-gradient(180deg,transparent 40%,rgba(7,43,54,.85)),url('images/peche-pirogue.jpg') center/cover}
+.exp:nth-child(2){background:linear-gradient(180deg,transparent 40%,rgba(7,43,54,.85)),url('images/cuisine-lac.jpg') center/cover}
+.exp:nth-child(3){background:linear-gradient(180deg,transparent 40%,rgba(7,43,54,.85)),url('images/excursion-idjwi.jpg') center/cover}
 .exp:nth-child(4){background:linear-gradient(180deg,transparent 40%,rgba(7,43,54,.85)),linear-gradient(135deg,#7A6A9B,#3D3355)}
 .exp b{font-family:var(--serif);font-size:1.05rem;display:block}
 .exp span{font-size:.8rem;color:rgba(255,255,255,.8)}
@@ -207,7 +208,7 @@ footer a{color:var(--sable);text-decoration:none}
     </div>
     <div class="cards">
       <div class="card reveal">
-        <div class="card-vis vis-1">Photo chambre classique</div>
+        <div class="card-vis vis-1"></div>
         <div class="card-body">
           <h3>Chambre Standard</h3>
           <p class="prix">40 $ <small>/ nuit</small></p>
@@ -221,7 +222,7 @@ footer a{color:var(--sable);text-decoration:none}
         </div>
       </div>
       <div class="card reveal">
-        <div class="card-vis vis-2">Photo chambre vue lac</div>
+        <div class="card-vis vis-2"></div>
         <div class="card-body">
           <h3>Chambre Vue Lac</h3>
           <p class="prix">70 $ <small>/ nuit</small></p>
@@ -235,7 +236,7 @@ footer a{color:var(--sable);text-decoration:none}
         </div>
       </div>
       <div class="card reveal">
-        <div class="card-vis vis-3">Photo bungalow</div>
+        <div class="card-vis vis-3"></div>
         <div class="card-body">
           <h3>Bungalow Famille</h3>
           <p class="prix">100 $ <small>/ nuit</small></p>
