@@ -53,19 +53,23 @@ header{position:relative;min-height:100svh;display:flex;align-items:center;color
   background:
    radial-gradient(1200px 600px at 80% -10%,rgba(14,159,110,.3),transparent 60%),
    radial-gradient(900px 500px at 10% 110%,rgba(22,105,122,.45),transparent 55%),
-   linear-gradient(160deg,rgba(7,43,54,.9) 0%,rgba(11,61,77,.78) 50%,rgba(15,76,92,.66) 100%),
+   linear-gradient(160deg,rgba(7,43,54,.68) 0%,rgba(11,61,77,.52) 50%,rgba(15,76,92,.4) 100%),
    url('images/hero-facade.jpg') center/cover no-repeat}
-.hero-in{position:relative;z-index:2;padding:130px 0 150px;max-width:720px}
-.globe-wrap{margin:44px auto 0;max-width:440px}
-.globe-stage{position:relative;aspect-ratio:1}
-.globe-stage canvas{position:absolute;inset:0;width:100%!important;height:100%!important;touch-action:pan-y;cursor:grab}
-.globe-hint{text-align:center;font-size:.78rem;color:rgba(255,255,255,.6);margin-top:14px;letter-spacing:.04em}
-.globe-fallback{position:absolute;inset:14%;border-radius:50%;border:1.5px solid rgba(47,230,160,.7);box-shadow:0 0 70px rgba(14,159,110,.4) inset,0 0 40px rgba(14,159,110,.25);display:none}
-.no-webgl .globe-fallback{display:block}
-@media(min-width:960px){
-  .hero-in{max-width:1100px;display:grid;grid-template-columns:1fr 440px;gap:56px;align-items:center}
-  .globe-wrap{margin:0}
-}
+.hero-in{position:relative;z-index:2;padding:130px 0 150px;max-width:1100px}
+.hero-txt{max-width:760px}
+.booking-card{background:var(--blanc);border-radius:18px;box-shadow:0 24px 60px rgba(7,43,54,.4);padding:22px;display:grid;grid-template-columns:1fr 1fr 1fr auto;gap:14px;align-items:end;max-width:1000px;margin-top:48px;position:relative;z-index:3}
+.booking-card label{display:block;font-size:.7rem;font-weight:700;letter-spacing:.07em;text-transform:uppercase;color:var(--gris);margin-bottom:7px}
+.booking-card input,.booking-card select{width:100%;padding:12px;border:1.5px solid #D9E2E2;border-radius:10px;font:inherit;font-size:.95rem;color:var(--encre);background:#fff}
+.booking-card input:focus,.booking-card select:focus{outline:2px solid var(--soleil);border-color:var(--soleil)}
+.btn-book{background:var(--soleil);color:#fff;border:none;padding:13px 24px;border-radius:10px;font:inherit;font-weight:700;font-size:.95rem;cursor:pointer;transition:background .2s;white-space:nowrap}
+.btn-book:hover{background:var(--soleil-d)}
+.booking-note{grid-column:1/-1;text-align:center;font-size:.8rem;color:var(--gris)}
+.trust{background:var(--blanc);padding:18px 0;border-bottom:1px solid var(--ivoire2)}
+.trust-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;text-align:center;font-size:.88rem;font-weight:600;color:var(--lac)}
+.trust-grid b{color:var(--soleil);margin-right:5px}
+@media(max-width:900px){.booking-card{grid-template-columns:1fr 1fr}}
+@media(max-width:760px){.trust-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:560px){.booking-card{grid-template-columns:1fr}}
 .kicker{display:inline-block;font-size:.8rem;letter-spacing:.18em;text-transform:uppercase;color:var(--sable);border:1px solid rgba(232,213,183,.4);padding:7px 16px;border-radius:99px;margin-bottom:26px}
 h1{font-family:var(--serif);font-size:clamp(2.4rem,6vw,4.2rem);line-height:1.08;font-weight:700;margin-bottom:22px}
 h1 em{font-style:normal;color:var(--sable)}
@@ -92,7 +96,8 @@ h1 em{font-style:normal;color:var(--sable)}
 /* SECTIONS */
 section{padding:88px 0}
 .sec-titre{text-align:center;max-width:640px;margin:0 auto 54px}
-.sec-titre .kicker{color:var(--soleil);border-color:rgba(224,122,63,.35)}
+.sec-titre .kicker{color:var(--soleil);border-color:rgba(14,159,110,.4)}
+.ph-badge{position:absolute;top:10px;left:10px;background:rgba(255,255,255,.95);color:var(--lac);font-size:.75rem;font-weight:700;padding:4px 10px;border-radius:8px;box-shadow:0 3px 10px rgba(0,0,0,.18);z-index:2}
 h2{font-family:var(--serif);font-size:clamp(1.8rem,4vw,2.6rem);color:var(--lac);line-height:1.15;margin-bottom:14px}
 .sec-titre p{color:var(--gris)}
 
@@ -102,7 +107,7 @@ h2{font-family:var(--serif);font-size:clamp(1.8rem,4vw,2.6rem);color:var(--lac);
 @media(max-width:900px){.cards{grid-template-columns:1fr;max-width:440px;margin:0 auto}}
 .card{background:var(--blanc);border-radius:var(--r);overflow:hidden;box-shadow:var(--ombre);display:flex;flex-direction:column;transition:transform .25s}
 .card:hover{transform:translateY(-6px)}
-.card-vis{height:180px;background-size:cover;background-position:center}
+.card-vis{position:relative;height:180px;background-size:cover;background-position:center}
 .vis-1{background-image:url('images/chambre-standard.jpg')}
 .vis-2{background-image:url('images/chambre-vue-lac.jpg')}
 .vis-3{background-image:url('images/suite-emeraude.jpg')}
@@ -197,15 +202,27 @@ footer a{color:var(--sable);text-decoration:none}
     </div>
     <p class="hero-fait">★ 4,4/5 · 102 avis voyageurs · Centre-ville, à 15 min de l'aéroport (FMI)</p>
     </div>
-    <div class="globe-wrap">
-      <div class="globe-stage" id="globe3d"><div class="globe-fallback"></div></div>
-      <p class="globe-hint">📍 Kalemie · Province du Tanganyika — glisser pour tourner</p>
-    </div>
+    <form class="booking-card" id="booking">
+      <div><label for="bk-in">Arrivée</label><input type="date" id="bk-in"></div>
+      <div><label for="bk-out">Départ</label><input type="date" id="bk-out"></div>
+      <div><label for="bk-guests">Voyageurs</label><select id="bk-guests"><option value="1">1 voyageur</option><option value="2" selected>2 voyageurs</option><option value="3">3 voyageurs</option><option value="4">4 voyageurs</option><option value="5">5+ voyageurs</option></select></div>
+      <button class="btn-book" type="submit">Vérifier les disponibilités</button>
+      <p class="booking-note">Réponse en moins d'une heure sur WhatsApp · Sans engagement · Paiement sur place en USD ou CDF</p>
+    </form>
   </div>
   <div class="waves" aria-hidden="true">
     <svg viewBox="0 0 1440 90" preserveAspectRatio="none"><path fill="#0B3D4D" d="M0,50 C240,90 480,10 720,40 C960,70 1200,20 1440,55 L1440,90 L0,90 Z"/><path fill="#FAF6EF" opacity=".35" d="M0,65 C300,30 600,85 900,55 C1140,35 1320,70 1440,60 L1440,90 L0,90 Z" transform="translate(0,10)"/></svg>
   </div>
 </header>
+
+<div class="trust">
+  <div class="wrap trust-grid">
+    <div><b>✓</b>Meilleur prix garanti</div>
+    <div><b>✓</b>Annulation flexible</div>
+    <div><b>✓</b>Réponse WhatsApp &lt; 1 h</div>
+    <div><b>✓</b>Paiement sur place</div>
+  </div>
+</div>
 
 <div class="faites">
   <div class="wrap faites-grid" style="padding-top:0">
@@ -225,7 +242,7 @@ footer a{color:var(--sable);text-decoration:none}
     </div>
     <div class="cards">
       <div class="card reveal">
-        <div class="card-vis vis-1"></div>
+        <div class="card-vis vis-1"><span class="ph-badge">★ 4,3</span></div>
         <div class="card-body">
           <h3>Chambre Classique</h3>
           <p class="prix">45 $ <small>/ nuit</small></p>
@@ -239,7 +256,7 @@ footer a{color:var(--sable);text-decoration:none}
         </div>
       </div>
       <div class="card reveal">
-        <div class="card-vis vis-2"></div>
+        <div class="card-vis vis-2"><span class="ph-badge">★ 4,5</span></div>
         <div class="card-body">
           <h3>Chambre Supérieure</h3>
           <p class="prix">70 $ <small>/ nuit</small></p>
@@ -253,7 +270,7 @@ footer a{color:var(--sable);text-decoration:none}
         </div>
       </div>
       <div class="card reveal">
-        <div class="card-vis vis-3"></div>
+        <div class="card-vis vis-3"><span class="ph-badge">★ 4,7</span></div>
         <div class="card-body">
           <h3>Suite Émeraude</h3>
           <p class="prix">110 $ <small>/ nuit</small></p>
@@ -357,72 +374,16 @@ addEventListener('scroll',()=>nav.classList.toggle('scrolled',scrollY>60),{passi
 const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.15});
 document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
 </script>
-<script type="importmap">{"imports":{"three":"https://cdn.jsdelivr.net/npm/three@0.160.1/build/three.module.js"}}</script>
-<script type="module">
-import * as THREE from 'three';
-const stage=document.getElementById('globe3d');
-const reduced=matchMedia('(prefers-reduced-motion: reduce)').matches;
-try{
-  if(!stage)throw new Error('stage absent');
-  const renderer=new THREE.WebGLRenderer({antialias:true,alpha:true});
-  renderer.setPixelRatio(Math.min(devicePixelRatio,2));
-  const sz=()=>{const r=stage.getBoundingClientRect();return[Math.max(r.width,120),Math.max(r.height,120)]};
-  renderer.setSize(...sz(),false);
-  stage.appendChild(renderer.domElement);
-  const scene=new THREE.Scene();
-  const camera=new THREE.PerspectiveCamera(38,1,.1,60);
-  camera.position.set(0,0,5.3);
-  const globe=new THREE.Group();
-  scene.add(globe);
-  const R=1.5;
-  globe.add(new THREE.Mesh(new THREE.SphereGeometry(R,48,48),new THREE.MeshStandardMaterial({color:0x0a3742,roughness:.55,metalness:.2})));
-  globe.add(new THREE.Mesh(new THREE.SphereGeometry(R*1.004,24,16),new THREE.MeshBasicMaterial({color:0x3FBFB5,wireframe:true,transparent:true,opacity:.16})));
-  globe.add(new THREE.Mesh(new THREE.SphereGeometry(R*1.16,32,32),new THREE.MeshBasicMaterial({color:0x0E9F6E,transparent:true,opacity:.1,side:THREE.BackSide})));
-  const lat=-4.9,lon=29.7,phi=(90-lat)*Math.PI/180,th=(lon+180)*Math.PI/180;
-  const pos=new THREE.Vector3(-R*Math.sin(phi)*Math.cos(th),R*Math.cos(phi),R*Math.sin(phi)*Math.sin(th));
-  const dot=new THREE.Mesh(new THREE.SphereGeometry(.05,16,16),new THREE.MeshBasicMaterial({color:0x2fe6a0}));
-  dot.position.copy(pos.clone().multiplyScalar(1.01));
-  globe.add(dot);
-  const ring=new THREE.Mesh(new THREE.TorusGeometry(.14,.012,12,48),new THREE.MeshBasicMaterial({color:0x2fe6a0,transparent:true,opacity:.9}));
-  ring.position.copy(pos.clone().multiplyScalar(1.02));
-  ring.lookAt(0,0,0);
-  globe.add(ring);
-  const N=260,pp=new Float32Array(N*3);
-  for(let i=0;i<N;i++){const r=7+Math.random()*6,a=Math.random()*Math.PI*2,b=Math.acos(2*Math.random()-1);pp[i*3]=r*Math.sin(b)*Math.cos(a);pp[i*3+1]=r*Math.cos(b);pp[i*3+2]=r*Math.sin(b)*Math.sin(a);}
-  const stars=new THREE.Points(new THREE.BufferGeometry().setAttribute('position',new THREE.BufferAttribute(pp,3)),new THREE.PointsMaterial({color:0xffffff,size:.03,transparent:true,opacity:.55}));
-  scene.add(stars);
-  scene.add(new THREE.AmbientLight(0xffffff,.85));
-  const d1=new THREE.DirectionalLight(0xffffff,1.15);d1.position.set(4,3,5);scene.add(d1);
-  const d2=new THREE.DirectionalLight(0x0E9F6E,.55);d2.position.set(-5,-2,3);scene.add(d2);
-  const baseYaw=Math.PI/2-th;
-  let dragYaw=0,drag=false,lastX=0,visible=true;
-  renderer.domElement.addEventListener('pointerdown',e=>{drag=true;lastX=e.clientX;renderer.domElement.style.cursor='grabbing'});
-  addEventListener('pointerup',()=>{drag=false;renderer.domElement.style.cursor='grab'});
-  renderer.domElement.addEventListener('pointermove',e=>{if(drag){dragYaw+=(e.clientX-lastX)*.006;lastX=e.clientX}});
-  new IntersectionObserver(es=>{visible=es[0].isIntersecting}).observe(stage);
-  const clock=new THREE.Clock();
-  function resize(){const[w2,h2]=sz();renderer.setSize(w2,h2,false);camera.aspect=w2/h2;camera.updateProjectionMatrix()}
-  addEventListener('resize',resize);
-  resize();
-  (function loop(){
-    requestAnimationFrame(loop);
-    const t=clock.getElapsedTime();
-    if(visible){
-      globe.rotation.y=baseYaw+dragYaw+(reduced?0:Math.sin(t*.3)*.35);
-      globe.rotation.x=reduced?0:Math.sin(t*.2)*.08;
-      const s=1+.3*Math.sin(t*2.6);
-      ring.scale.set(s,s,s);
-      ring.material.opacity=.55+.35*Math.sin(t*2.6);
-      stars.rotation.y=t*.008;
-      renderer.render(scene,camera);
-    }
-  })();
-  document.documentElement.classList.add('has3d');
-}catch(err){
-  document.documentElement.classList.add('no-webgl');
-  console.warn('3D indisponible:',err);
-}
-setTimeout(()=>{if(!document.documentElement.classList.contains('has3d'))document.documentElement.classList.add('no-webgl')},4500);
+<script>
+document.getElementById('booking').addEventListener('submit',function(e){
+  e.preventDefault();
+  var d=document.getElementById('bk-in').value,dr=document.getElementById('bk-out').value,g=document.getElementById('bk-guests');
+  var t='Bonjour Hôtel Émeraude, je souhaite vérifier les disponibilités';
+  if(d&&dr){t+=' du '+d+' au '+dr;}
+  else if(d){t+=' à partir du '+d;}
+  t+=', '+g.options[g.selectedIndex].text+'. Merci de me proposer les chambres disponibles.';
+  window.open('https://wa.me/243999000000?text='+encodeURIComponent(t),'_blank');
+});
 </script>
 </body>
 </html>
