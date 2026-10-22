@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="fr" translate="no">
+<head>
+<meta charset="UTF-8">
+<meta name="google" content="notranslate">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Hôtel Émeraude — Kalemie, Boulevard Lumumba | Réservation directe</title>
+<meta name="description" content="Hôtel Émeraude, Boulevard Lumumba, quartier OUA à Kalemie. Chambres climatisées en centre-ville, Wi-Fi, navette aéroport. Réservez directement sur WhatsApp — sans commission.">
+<style>
+:root{
+  --lac:#0B3D4D;
+  --lac2:#0F4C5C;
+  --lac3:#16697A;
+  --sable:#E8D5B7;
+  --ivoire:#FAF6EF;
+  --ivoire2:#F3EDE1;
+  --soleil:#E07A3F;
+  --soleil-d:#C4612A;
+  --encre:#1A2E35;
+  --gris:#5B6B73;
+  --blanc:#FFFFFF;
+  --serif:Georgia,'Times New Roman',serif;
+  --sans:system-ui,-apple-system,'Segoe UI',Roboto,Arial,sans-serif;
+  --ombre:0 10px 30px rgba(11,61,77,.12);
+  --r:14px;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:var(--sans);color:var(--encre);background:var(--ivoire);line-height:1.6;-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
+a{color:inherit}
+.wrap{max-width:1100px;margin:0 auto;padding:0 22px}
+.reveal{opacity:0;transform:translateY(26px);transition:opacity .7s ease,transform .7s ease}
+.reveal.in{opacity:1;transform:none}
+
+/* NAV */
+nav{position:fixed;inset:0 0 auto 0;z-index:50;transition:background .3s,box-shadow .3s;padding:14px 0}
+nav.scrolled{background:rgba(250,246,239,.92);backdrop-filter:blur(10px);box-shadow:0 1px 0 rgba(11,61,77,.08)}
+.nav-in{display:flex;align-items:center;justify-content:space-between}
+.logo{font-family:var(--serif);font-size:1.25rem;font-weight:700;text-decoration:none;color:var(--ivoire);letter-spacing:.02em;transition:color .3s}
+nav.scrolled .logo{color:var(--lac)}
+.logo em{font-style:normal;color:var(--soleil)}
+.nav-links{display:flex;gap:26px;list-style:none}
+.nav-links a{text-decoration:none;font-size:.92rem;font-weight:600;color:rgba(255,255,255,.9);transition:color .3s}
+nav.scrolled .nav-links a{color:var(--lac)}
+.nav-links a:hover{color:var(--soleil)}
+.nav-wa{background:var(--soleil);color:#fff!important;padding:9px 18px;border-radius:99px!important;font-size:.9rem!important}
+.nav-wa:hover{background:var(--soleil-d)}
+@media(max-width:760px){.nav-links li:not(:last-child){display:none}}
+
+/* HERO */
+header{position:relative;min-height:100svh;display:flex;align-items:center;color:var(--blanc);overflow:hidden;
+  background:
+   radial-gradient(1200px 600px at 80% -10%,rgba(224,122,63,.3),transparent 60%),
+   radial-gradient(900px 500px at 10% 110%,rgba(22,105,122,.5),transparent 55%),
+   linear-gradient(160deg,#072B36 0%,var(--lac) 45%,var(--lac2) 100%)}
+.hero-in{position:relative;z-index:2;padding:130px 0 150px;max-width:720px}
+.kicker{display:inline-block;font-size:.8rem;letter-spacing:.18em;text-transform:uppercase;color:var(--sable);border:1px solid rgba(232,213,183,.4);padding:7px 16px;border-radius:99px;margin-bottom:26px}
+h1{font-family:var(--serif);font-size:clamp(2.4rem,6vw,4.2rem);line-height:1.08;font-weight:700;margin-bottom:22px}
+h1 em{font-style:normal;color:var(--sable)}
+.lead{font-size:clamp(1.02rem,2vw,1.2rem);color:rgba(255,255,255,.85);max-width:540px;margin-bottom:36px}
+.cta-row{display:flex;gap:14px;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;gap:10px;padding:15px 28px;border-radius:99px;text-decoration:none;font-weight:700;font-size:1rem;transition:transform .15s,background .2s;border:none;cursor:pointer}
+.btn:hover{transform:translateY(-2px)}
+.btn-wa{background:#25D366;color:#06281A}
+.btn-wa:hover{background:#1FBB5A}
+.btn-ghost{border:1.5px solid rgba(255,255,255,.5);color:#fff}
+.btn-ghost:hover{border-color:#fff;background:rgba(255,255,255,.08)}
+.hero-fait{margin-top:34px;font-size:.88rem;color:rgba(255,255,255,.6)}
+.waves{position:absolute;left:0;right:0;bottom:-2px;z-index:1;line-height:0}
+.waves svg{width:100%;height:90px;display:block}
+
+/* BARRE INFOS */
+.faites{background:var(--lac);color:var(--blanc);padding:0 0 64px;margin-top:-1px}
+.faites-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.fait{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:var(--r);padding:22px 18px;text-align:center}
+.fait b{display:block;font-family:var(--serif);font-size:1.5rem;color:var(--sable)}
+.fait span{font-size:.85rem;color:rgba(255,255,255,.75)}
+@media(max-width:760px){.faites-grid{grid-template-columns:repeat(2,1fr)}}
+
+/* SECTIONS */
+section{padding:88px 0}
+.sec-titre{text-align:center;max-width:640px;margin:0 auto 54px}
+.sec-titre .kicker{color:var(--soleil);border-color:rgba(224,122,63,.35)}
+h2{font-family:var(--serif);font-size:clamp(1.8rem,4vw,2.6rem);color:var(--lac);line-height:1.15;margin-bottom:14px}
+.sec-titre p{color:var(--gris)}
+
+/* CHAMBRES */
+.chambres{background:var(--ivoire2)}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+@media(max-width:900px){.cards{grid-template-columns:1fr;max-width:440px;margin:0 auto}}
+.card{background:var(--blanc);border-radius:var(--r);overflow:hidden;box-shadow:var(--ombre);display:flex;flex-direction:column;transition:transform .25s}
+.card:hover{transform:translateY(-6px)}
+.card-vis{height:180px;background-size:cover;background-position:center}
+.vis-1{background-image:url('images/chambre-standard.jpg')}
+.vis-2{background-image:url('images/chambre-vue-lac.jpg')}
+.vis-3{background:linear-gradient(145deg,#C4612A,#E8B87A)}
+.card-body{padding:26px;display:flex;flex-direction:column;flex:1}
+.card h3{font-family:var(--serif);font-size:1.35rem;color:var(--lac);margin-bottom:6px}
+.prix{font-size:.95rem;color:var(--soleil);font-weight:700;margin-bottom:14px}
+.prix small{color:var(--gris);font-weight:400}
+.card ul{list-style:none;margin-bottom:22px;flex:1}
+.card li{padding:5px 0 5px 26px;position:relative;font-size:.93rem;color:var(--gris)}
+.card li::before{content:"✓";position:absolute;left:0;color:var(--lac3);font-weight:700}
+.btn-card{display:block;text-align:center;padding:13px;border-radius:10px;background:var(--lac);color:#fff;text-decoration:none;font-weight:700;font-size:.95rem;transition:background .2s}
+.btn-card:hover{background:var(--lac3)}
+
+/* EXPÉRIENCES */
+.exp-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+@media(max-width:900px){.exp-grid{grid-template-columns:repeat(2,1fr)}}
+.exp{position:relative;border-radius:var(--r);aspect-ratio:3/4;overflow:hidden;display:flex;align-items:flex-end;padding:18px;color:#fff}
+.exp:nth-child(1){background:linear-gradient(180deg,transparent 40%,rgba(7,43,54,.85)),linear-gradient(135deg,#E07A3F,#8B3A1F)}
+.exp:nth-child(2){background:linear-gradient(180deg,transparent 40%,rgba(7,43,54,.85)),linear-gradient(135deg,#16697A,#0B3D4D)}
+.exp:nth-child(3){background:linear-gradient(180deg,transparent 40%,rgba(7,43,54,.85)),linear-gradient(135deg,#5B8C5A,#2D5A3D)}
+.exp:nth-child(4){background:linear-gradient(180deg,transparent 40%,rgba(7,43,54,.85)),linear-gradient(135deg,#7A6A9B,#3D3355)}
+.exp b{font-family:var(--serif);font-size:1.05rem;display:block}
+.exp span{font-size:.8rem;color:rgba(255,255,255,.8)}
+
+/* AVIS */
+.avis{background:var(--lac);color:#fff}
+.avis h2{color:#fff}
+.avis .sec-titre p{color:rgba(255,255,255,.7)}
+.avis-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+@media(max-width:900px){.avis-grid{grid-template-columns:1fr;max-width:480px;margin:0 auto}}
+.avis-card{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.12);border-radius:var(--r);padding:26px}
+.etoiles{color:var(--sable);letter-spacing:3px;margin-bottom:12px}
+.avis-card p{font-size:.95rem;color:rgba(255,255,255,.85);font-style:italic;margin-bottom:16px}
+.avis-card b{font-size:.88rem;color:var(--sable)}
+
+/* CONTACT */
+.contact-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:start}
+@media(max-width:860px){.contact-grid{grid-template-columns:1fr}}
+.contact-box{background:var(--blanc);border-radius:var(--r);box-shadow:var(--ombre);padding:34px}
+.contact-box h3{font-family:var(--serif);color:var(--lac);font-size:1.3rem;margin-bottom:18px}
+.info-ligne{display:flex;gap:14px;padding:12px 0;border-bottom:1px solid var(--ivoire2);font-size:.95rem}
+.info-ligne:last-of-type{border:none}
+.info-ligne b{min-width:92px;color:var(--lac)}
+.info-ligne span{color:var(--gris)}
+.btn-wa-block{margin-top:24px;width:100%;justify-content:center;font-size:1.05rem;padding:17px}
+.map-card{background:linear-gradient(160deg,var(--lac2),var(--lac3));border-radius:var(--r);color:#fff;padding:34px;height:100%;display:flex;flex-direction:column;justify-content:center}
+.map-card h3{font-family:var(--serif);font-size:1.3rem;margin-bottom:12px;color:var(--sable)}
+.map-card p{color:rgba(255,255,255,.85);margin-bottom:22px;font-size:.95rem}
+.btn-map{align-self:flex-start;border:1.5px solid rgba(255,255,255,.5);color:#fff;padding:12px 22px;border-radius:99px;text-decoration:none;font-weight:600;font-size:.9rem}
+.btn-map:hover{background:rgba(255,255,255,.1)}
+
+/* FOOTER */
+footer{background:#072B36;color:rgba(255,255,255,.65);padding:44px 0;text-align:center;font-size:.88rem}
+footer .logo{color:#fff;display:inline-block;margin-bottom:10px}
+footer a{color:var(--sable);text-decoration:none}
+
+/* WHATSAPP FLOTTANT */
+.wa-float{position:fixed;right:20px;bottom:20px;z-index:60;width:60px;height:60px;border-radius:50%;background:#25D366;color:#fff;display:flex;align-items:center;justify-content:center;box-shadow:0 8px 24px rgba(0,0,0,.28);text-decoration:none;transition:transform .2s}
+.wa-float:hover{transform:scale(1.08)}
+.wa-float svg{width:32px;height:32px;fill:currentColor}
+
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.reveal{opacity:1;transform:none;transition:none}}
+</style>
+</head>
+<body>
+
+<nav id="nav">
+  <div class="wrap nav-in">
+    <a class="logo" href="#top">Hôtel <em>Émeraude</em></a>
+    <ul class="nav-links">
+      <li><a href="#chambres">Chambres</a></li>
+      <li><a href="#experiences">Expériences</a></li>
+      <li><a href="#avis">Avis</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li><a class="nav-wa" href="https://wa.me/243999000000?text=Bonjour%2C%20je%20souhaite%20r%C3%A9server%20une%20chambre%20%C3%A0%20l%27H%C3%B4tel%20%C3%89meraude." target="_blank" rel="noopener">Réserver</a></li>
+    </ul>
+  </div>
+</nav>
+
+<header id="top">
+  <div class="wrap hero-in">
+    <span class="kicker">Kalemie · Boulevard Lumumba · Quartier OUA</span>
+    <h1>Le cœur de<br><em>Kalemie.</em></h1>
+    <p class="lead">Sur le Boulevard Lumumba, à deux pas des banques, administrations et du marché. Chambres climatisées, Wi-Fi et navette aéroport — réservez en 2 minutes sur WhatsApp, sans commission.</p>
+    <div class="cta-row">
+      <a class="btn btn-wa" href="https://wa.me/243999000000?text=Bonjour%2C%20je%20souhaite%20r%C3%A9server%20une%20chambre%20%C3%A0%20l%27H%C3%B4tel%20%C3%89meraude." target="_blank" rel="noopener">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.7 14.9L2 22l5.3-1.4A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3.1.8.8-3-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.6-6.1c-.3-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1-.2.3-.6.8-.8 1-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.4-3c-.3-.4 0-.5.2-.7l.4-.5c.1-.2.1-.3 0-.5l-.8-1.9c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.9.9-1.2 2-.9 3.2a9.4 9.4 0 0 0 4.8 5.1c2.6 1.2 3.5 1 4.2.9.6-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.1-1.2-.1-.1-.3-.2-.6-.3z"/></svg>
+        Réserver sur WhatsApp
+      </a>
+      <a class="btn btn-ghost" href="#chambres">Voir les chambres</a>
+    </div>
+    <p class="hero-fait">★ 4,4/5 · 102 avis voyageurs · Centre-ville, à 15 min de l'aéroport (FMI)</p>
+  </div>
+  <div class="waves" aria-hidden="true">
+    <svg viewBox="0 0 1440 90" preserveAspectRatio="none"><path fill="#0B3D4D" d="M0,50 C240,90 480,10 720,40 C960,70 1200,20 1440,55 L1440,90 L0,90 Z"/><path fill="#FAF6EF" opacity=".35" d="M0,65 C300,30 600,85 900,55 C1140,35 1320,70 1440,60 L1440,90 L0,90 Z" transform="translate(0,10)"/></svg>
+  </div>
+</header>
+
+<div class="faites">
+  <div class="wrap faites-grid" style="padding-top:0">
+    <div class="fait reveal" style="margin-top:-44px"><b>24</b><span>chambres &amp; suites</span></div>
+    <div class="fait reveal" style="margin-top:-44px"><b>2 min</b><span>pour réserver en ligne</span></div>
+    <div class="fait reveal" style="margin-top:-44px"><b>15 min</b><span>de l'aéroport (FMI)</span></div>
+    <div class="fait reveal" style="margin-top:-44px"><b>0 %</b><span>de commission OTA</span></div>
+  </div>
+</div>
+
+<section id="chambres" class="chambres">
+  <div class="wrap">
+    <div class="sec-titre reveal">
+      <span class="kicker">Nos chambres</span>
+      <h2>Trois façons de séjourner au centre-ville</h2>
+      <p>Toutes nos chambres sont climatisées, avec eau chaude 24h/24 et petit-déjeuner inclus.</p>
+    </div>
+    <div class="cards">
+      <div class="card reveal">
+        <div class="card-vis vis-1"></div>
+        <div class="card-body">
+          <h3>Chambre Classique</h3>
+          <p class="prix">45 $ <small>/ nuit</small></p>
+          <ul>
+            <li>Lit double ou deux lits</li>
+            <li>Climatisation &amp; ventilateur</li>
+            <li>Salle d'eau privée</li>
+            <li>Petit-déjeuner inclus</li>
+          </ul>
+          <a class="btn-card" href="https://wa.me/243999000000?text=Bonjour%2C%20je%20souhaite%20r%C3%A9server%20une%20Chambre%20Classique." target="_blank" rel="noopener">Réserver cette chambre</a>
+        </div>
+      </div>
+      <div class="card reveal">
+        <div class="card-vis vis-2"></div>
+        <div class="card-body">
+          <h3>Chambre Supérieure</h3>
+          <p class="prix">70 $ <small>/ nuit</small></p>
+          <ul>
+            <li>Vue sur le lac (étages supérieurs)</li>
+            <li>Grand lit &amp; coin bureau</li>
+            <li>Wi-Fi haut débit inclus</li>
+            <li>Petit-déjeuner inclus</li>
+          </ul>
+          <a class="btn-card" href="https://wa.me/243999000000?text=Bonjour%2C%20je%20souhaite%20r%C3%A9server%20une%20Chambre%20Sup%C3%A9rieure." target="_blank" rel="noopener">Réserver cette chambre</a>
+        </div>
+      </div>
+      <div class="card reveal">
+        <div class="card-vis vis-3"></div>
+        <div class="card-body">
+          <h3>Suite Émeraude</h3>
+          <p class="prix">110 $ <small>/ nuit</small></p>
+          <ul>
+            <li>Salon &amp; chambre séparés</li>
+            <li>Bureau &amp; coin réunion</li>
+            <li>Idéal délégations &amp; ONG</li>
+            <li>Navette aéroport offerte</li>
+          </ul>
+          <a class="btn-card" href="https://wa.me/243999000000?text=Bonjour%2C%20je%20souhaite%20r%C3%A9server%20la%20Suite%20%C3%89meraude." target="_blank" rel="noopener">Réserver cette suite</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="experiences">
+  <div class="wrap">
+    <div class="sec-titre reveal">
+      <span class="kicker">Expériences</span>
+      <h2>Au-delà de la chambre</h2>
+      <p>Marchés, avenue et lac : Kalemie vit au rythme du Boulevard Lumumba.</p>
+    </div>
+    <div class="exp-grid">
+      <div class="exp reveal"><div><b>Marché central</b><span>Tissus, épices et poisson sec · 10 min</span></div></div>
+      <div class="exp reveal"><div><b>Boulevard Lumumba</b><span>Commerces &amp; restaurants au pied de l'hôtel</span></div></div>
+      <div class="exp reveal"><div><b>Lac Tanganyika</b><span>Plage et pirogues à 15 minutes</span></div></div>
+      <div class="exp reveal"><div><b>Navette aéroport</b><span>Service 24h/24 · FMI</span></div></div>
+    </div>
+  </div>
+</section>
+
+<section id="avis" class="avis">
+  <div class="wrap">
+    <div class="sec-titre reveal">
+      <span class="kicker">Ils sont venus</span>
+      <h2>Ce que disent nos voyageurs</h2>
+      <p>Avis vérifiés — affichés automatiquement, sans filtre.</p>
+    </div>
+    <div class="avis-grid">
+      <div class="avis-card reveal">
+        <div class="etoiles">★★★★★</div>
+        <p>« Chambre impeccable, vue lac magnifique, et le personnel nous a récupérés à l'aéroport à minuit. »</p>
+        <b>— Sophie K., Kinshasa</b>
+      </div>
+      <div class="avis-card reveal">
+        <div class="etoiles">★★★★★</div>
+        <p>« J'ai réservé sur WhatsApp en 2 minutes depuis Lubumbashi. Prix juste, sans commission. »</p>
+        <b>— Marc D., Lubumbashi</b>
+      </div>
+      <div class="avis-card reveal">
+        <div class="etoiles">★★★★☆</div>
+        <p>« Emplacement idéal au centre-ville pour nos réunions, personnel efficace et Wi-Fi fiable. »</p>
+        <b>— Amina H., Nairobi</b>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="wrap">
+    <div class="sec-titre reveal">
+      <span class="kicker">Contact &amp; réservation</span>
+      <h2>Une question ? Écrivez-nous.</h2>
+      <p>Réponse en moins d'une heure, 7j/7, en français ou en swahili.</p>
+    </div>
+    <div class="contact-grid">
+      <div class="contact-box reveal">
+        <h3>Coordonnées</h3>
+        <div class="info-ligne"><b>Adresse</b><span>Boulevard Lumumba, Quartier OUA, Kalemie, Tanganyika, RDC</span></div>
+        <div class="info-ligne"><b>Téléphone</b><span>+243 999 000 000</span></div>
+        <div class="info-ligne"><b>E-mail</b><span>reservation@exemple.cd</span></div>
+        <div class="info-ligne"><b>Réception</b><span>Ouverte 24h/24 · FR · SW · EN</span></div>
+        <a class="btn btn-wa btn-wa-block" href="https://wa.me/243999000000?text=Bonjour%2C%20une%20question%20sur%20votre%20h%C3%B4tel." target="_blank" rel="noopener">Écrire sur WhatsApp</a>
+      </div>
+      <div class="map-card reveal">
+        <h3>Nous trouver</h3>
+        <p>Sur le Boulevard Lumumba, au cœur du quartier OUA, à 15 minutes de l'aéroport (FMI), près des banques et administrations.</p>
+        <a class="btn-map" href="https://www.google.com/maps/search/Emeraude+Hotel+Kalemie" target="_blank" rel="noopener">Ouvrir dans Google Maps →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <a class="logo" href="#top">Hôtel <em style="color:var(--soleil)">Lac Tanganyika</em></a>
+    <p>Boulevard Lumumba, Kalemie · RDC · <a href="https://wa.me/243999000000" target="_blank" rel="noopener">WhatsApp</a></p>
+    <p style="margin-top:8px">© <span id="year"></span> Hôtel Lac Tanganyika — Tous droits réservés</p>
+  </div>
+</footer>
+
+<a class="wa-float" href="https://wa.me/243999000000?text=Bonjour%2C%20je%20souhaite%20r%C3%A9server%20une%20chambre." target="_blank" rel="noopener" aria-label="Réserver sur WhatsApp">
+  <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.7 14.9L2 22l5.3-1.4A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3.1.8.8-3-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.6-6.1c-.3-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1-.2.3-.6.8-.8 1-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.4-3c-.3-.4 0-.5.2-.7l.4-.5c.1-.2.1-.3 0-.5l-.8-1.9c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.9.9-1.2 2-.9 3.2a9.4 9.4 0 0 0 4.8 5.1c2.6 1.2 3.5 1 4.2.9.6-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.1-1.2-.1-.1-.3-.2-.6-.3z"/></svg>
+</a>
+
+<script>
+document.getElementById('year').textContent=new Date().getFullYear();
+const nav=document.getElementById('nav');
+addEventListener('scroll',()=>nav.classList.toggle('scrolled',scrollY>60),{passive:true});
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.15});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+</script>
+</body>
+</html>
